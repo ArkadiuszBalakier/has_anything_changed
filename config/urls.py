@@ -21,7 +21,8 @@ from django.urls import include, path
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", include("content.urls")),
+    path("api/", include("content.urls")),
+    path("api/auth/", include("users.urls")),
 ]
 
 app_name = "config"
